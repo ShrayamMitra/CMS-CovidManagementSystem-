@@ -1,0 +1,27 @@
+{% extends 'base2.html' %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/styleabout.css">
+
+<div class="container">
+
+    <div class="card mx-5 my-5" id="abt">
+        <h1 class="card-header" id ="heading">Profile Information ::</h1>
+        <div class="card-body">
+          <p class="card-text"
+          <ul>
+            <li class ="liabt">Name :: {{names}}</li>
+            <li class ="liabt">Account created on :: {{datess}}</li>
+          </ul>
+        </p>
+        </div>
+    </div>
+
+
+    <img src="/static/img/WHO_Risk-Management_If-Someone-Gets-Sick/{{ii}}.jpg" class="img-fluid " width="38.5%" style="margin: 5% 5% 5% 5% ;">
+    <img src="/static/img/WHO_Risk-Management_If-Someone-Gets-Sick/{{(ii+1)%8}}.jpg" class="img-fluid" width="38.5%" style="margin: 5% 5% 5% 5% ;">
+</div>
+
+
+{% endblock %}
+ 

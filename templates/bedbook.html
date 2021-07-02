@@ -1,0 +1,31 @@
+<h1><span class="blue"></span>BED BOOKING<span class="blue"></span> <span class="yellow"></pan></h1>
+<link rel="stylesheet" type="text/css" href="/static/css/bedbook.css">
+
+<table class="container">
+	<thead>
+		<tr>
+			<th><h1>Hosp name</h1></th>
+			<th><h1>Total capacity</h1></th>
+			<th><h1>Currently available</h1></th>
+			<th><h1>BOOK NOW!!</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for bed in beds%}
+		<tr>
+			<td>Hosp-{{bed.HospID}}</td>
+			<td>{{TotalBed}} </td>
+			<td>{{bed.bLeft}} </td>
+			{% if bed.bLeft <= 0 %}
+				<td>NAN</td>
+			{% else %}
+			 <td><a href="/confirm2/{{bed.HospID}}/{{rs}}">
+    <div >
+     	Click Here 
+    </div>
+  </a></td>
+			 {% endif %}
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

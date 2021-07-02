@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="menu">
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content==" IE=edge " />
+    <meta name="google" value="notranslate" />
+
+    <title>Hospital lists</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/styleVac.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div>
+        <img src="/static/img/WHO_Risk-Management_If-Someone-Gets-Sick/{{ii}}.jpg" class="img-fluid " width="35.5%"
+            style="margin: 5% 5% 5% 10% ;">
+        <img src="/static/img/WHO_Risk-Management_If-Someone-Gets-Sick/{{(ii+1)%8}}.jpg" class="img-fluid" width="35.5%"
+            style="margin: 5% 5% 5% 5% ;">
+    </div>
+
+    </div>
+    <nav class="main-menu">
+        <div class="settings"></div>
+        <div class="scrollbar" id="style-1">
+            <ul>
+                <li>
+                    <a href="/2/{{rs}}">
+                        <i class="fa fa-arrow-circle-left"></i>
+                        <span class="nav-text">Back</span>
+                    </a>
+                </li>
+
+                {% for i in range(NumberOfHospitals) %}
+                <li>
+                    <a href="/cal/{{i}}/{{rs}}">
+                        <i class="  fa fa-stethoscope "></i>
+                        <span class="nav-text">Hosp-{{i}}</span>
+                    </a>
+                </li>
+                {%endfor%}
+
+            </ul>
+    </nav>
+</body>
+
+</html>

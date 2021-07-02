@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <title>
+    CMS (Covid Management System)
+  </title>
+</head>
+
+<body background="../img/39613.jpg">
+  {%if error_1%}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>{{error_1}}</strong> You should check in on some of those fields below.
+  </div>
+  {% endif %}
+
+  <div class="container">
+    <form action="/login" method="POST">
+      <div class="login-wrap">
+        <div class="login-html">
+          <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign
+            In</label>
+          <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+          <div class="login-form">
+            <div class="sign-in-htm">
+              <div class="group">
+                <input id="user" type="email" class="input" placeholder="Enter your email" name="email_name"
+                  value="{{Email}}">
+              </div>
+              <div class="group">
+                <input id="pass" type="password" class="input" data-type="password" placeholder="Enter your password"
+                  name="password" value="{{Password}}">
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Sign In">
+              </div>
+              <div class="hr"></div>
+
+            </div>
+    </form>
+
+    <form action="signup" method="POST">
+      <div class="sign-up-htm">
+        <div class="group">
+
+
+          <input type="text" class="input" placeholder="Enter your first name" name="fs_name" value="{{FirstName}}">
+
+          <br>
+
+          <input type="text" class="input" placeholder="Enter your last name" name="sc_name" value="{{LastName}}">
+
+          <br>
+
+          <input type="text" class="input" placeholder="Enter your address" name="address" value="{{Address}}">
+
+          <br>
+
+
+          <input type="text" class="input" placeholder="Enter your number" name="phone" value="{{Phone}}">
+
+          <br>
+          <input type="email" class="input" placeholder="Enter your email" name="email_name" value="{{Email}}">
+
+          <br>
+          <input type="password" class="input" placeholder="Enter your password" name="password1" value="{{Password1}}">
+
+          <br>
+          <input type="password" class="input" placeholder="Confirm the password" name="password2"
+            value="{{Password2}}">
+
+        </div>
+
+        <div class="group">
+          <input type="submit" class="button" value="Sign Up">
+        </div>
+        <div class="hr"></div>
+      </div>
+  </div>
+  </div>
+  </div>
+  </form>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

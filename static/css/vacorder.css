@@ -1,0 +1,20 @@
+body{
+    background:  linear-gradient(rgba(0, 0, 0, 0.1), rgba(0,0,0, 0.1)),url("/static/img/Base THEME.jpg");
+}
+#aj
+{
+    background-color: rgba(248, 178, 178, 0.7);
+}
+#kal
+{
+    background-color: rgba(54, 3, 54, 0.603);
+}
+p{
+    font-weight: bold;
+}
+h5{
+    font-weight: bold;
+}
+h1{
+    text-align: center;
+}

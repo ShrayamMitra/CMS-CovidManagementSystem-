@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang=en>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/vacorder.css">
+  </head>
+<body background="/static/img/Base THEME.jpg"  >
+  <h1>Your Vaccine Order List</h1><br><br>
+
+  {% for i in range(0,futureDate|length)|reverse%}
+      <div class="mx-5 card" id="aj">
+        <h5 class="card-header" id = "kal" style="color:aliceblue">#Booking no :: {{ pastDate|length + (i+1) }}</h5>
+        <div class="card-body">
+          <h5 class="card-title"> To be Vaccinated on    {{futureDate[i]}}</h5>
+          <p class="card-text">Chosen center is :: Hosp - {{futureId[i]}} </p>
+         
+          <a href="/cancel/{{futureDate[i]}}/{{futureId[i]}}/{{rs}}" class="btn btn-warning btn-outline-dark">Cancel</a>
+        </div>
+      </div>
+      <br>
+  {%endfor%}
+
+  {% for i in range(0,pastDate|length)|reverse%}
+      <div class="mx-5 card" id="aj">
+        <h5 class="card-header" id = "kal" style="color:aliceblue">#Booking no :: {{i+1}}</h5>
+        <div class="card-body">
+          <h5 class="card-title">Vaccinated on   {{pastDate[i]}}</h5>
+          <p class="card-text">Chosen center was :: Hosp - {{pastId[i]}} </p>
+         
+        </div>
+      </div>
+      <br>
+  {%endfor%}
+ 
+</body>
+</html>

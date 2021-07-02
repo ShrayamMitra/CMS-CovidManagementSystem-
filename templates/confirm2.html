@@ -1,0 +1,31 @@
+<link rel="stylesheet" type="text/css" href="/static/css/styleConfirm.css">
+
+
+<div class="columns">
+	<div class="column main"><input name="form_key" type="hidden" value="PefvQbePmuX6e2ZN">
+		<div id="authenticationPopup" data-bind="scope:'authenticationPopup'">
+			<div class="success-extras">
+				<i class="far fa-check-circle"></i>
+				<p>Confirm the hospital you Just Chose for bed booking!</p>
+				<p class="success-lrg">
+					The chosen Hospital id is:: Hosp-{{id}}
+				</p>
+				<hr class="divider">
+			</div>
+		</div>
+		<div class="checkout-success">
+			<div class="actions-toolbar">
+				<div class="primary">
+					<a class="action primary continue" href="/bedfinal/{{id}}/{{rs}}">CONFIRM</a>
+				</div>
+			</div>
+                <br>
+			<div class="actions-toolbar">
+				<div class="primary">
+					<a class="action primary continue" href="/2/{{rs}}">CANCEL</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>

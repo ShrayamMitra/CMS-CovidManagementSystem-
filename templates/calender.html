@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="/static/css/cal.css">
+
+<div class="calender">
+
+  <div class="month">
+    <h1>Working days of hospital </h1>
+    {%for i in mont %}
+    {% if i.vLeft !=0%}
+    <a href="/confirm/{{id}}/{{i.dates}}/{{rs}}"><span class="day">{{i.dates}}</span></a>
+    {%else%}
+    <span class="day2">All Booked</span>
+    {%endif%}
+    {%endfor%}
+    <div class="clearfix"></div>
+  </div>
+</div>

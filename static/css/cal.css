@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+@import url( https://fonts.googleapis.com/css?family=Montserrat );
+
+.clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;line-height:0;content:""}.clearfix:after{clear:both}
+
+body{
+    background:url("/static/img/canew.jpg") no-repeat center;
+    background-size: 1536px 1004px;
+}
+img {  
+max-width: 100%;  
+height: auto;  
+}
+.calender{
+  margin:40px auto;
+  width:70%;
+  padding:50px;
+  background:rgba(238, 131, 145, 0.2);
+  border:1px solid #ccc;
+  color:#472e5c;
+  position:relative;
+}
+
+.calender:before,
+.calender:after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  box-shadow: inherit;
+  -webkit-transform: rotate(2deg);
+  box-shadow:0 0 20px rgba(207, 39, 39, 0.3);
+}
+
+.calender::after{ -webkit-transform: rotate(-1deg) }
+
+.calender h1{
+  font-family:"Times New Roman";
+  font-size: 40;
+  width:100%;
+  text-align:center;
+  text-shadow:1px 1px 0px rgba(0,0,0,.6);
+}
+
+.calender .day{
+  display:block;
+  width:13.5%;
+  height:0;
+  padding-top:6%;
+  padding-bottom:8%;
+  float:left;
+  text-align:center;
+  background:rgba(165, 154, 156, 0.8);
+  border:1px solid #f7f7f7;
+  font-family:sans-serif;
+  font-size:  min(3vh,2vw);
+  -webkit-transition: all .2s ease;
+  cursor:pointer;
+}
+
+.calender .day:hover{
+  background:rgb(0, 127, 114);
+  color:#f7f7f7;
+  box-shadow:inset 0 0 20px rgba(0,0,0,.4);
+  text-shadow:1px 1px 2px rgba(0,0,0,.4);
+}
+
+
+
+  
+.calender .day.current{
+  background:rgba(236, 154, 24, 1);
+  color:#f7f7f7;
+  box-shadow:inset 0 0 20px rgba( 0,0,0, .4);
+  text-shadow:1px 1px 2px rgba(0,0,0,.4);
+}
+
+
+
+.calender .day2{
+  display:block;
+  width:13.5%;
+  height:0;
+  padding-top:6%;
+  padding-bottom:8%;
+  float:left;
+  text-align:center;
+  background:rgba(247, 226, 39, 0.493);
+  border:1px solid #f7f7f7;
+  font-family:sans-serif;
+  font-size:  min(3vh,2vw);
+  -webkit-transition: all .2s ease;
+  cursor:pointer;
+}
+
+.calender .day2:hover{
+  background:rgba(192, 90, 42, 0.8);
+  color:#f7f7f7;
+  box-shadow:inset 0 0 20px rgba(0,0,0,.4);
+  text-shadow:1px 1px 2px rgba(0,0,0,.4);
+}
+
+
+
+  
+.calender .day2.current{
+  background:rgba(0,0,0);
+  color:#0000;
+  box-shadow:inset 0 0 20px rgba( 0,0,0, .4);
+  text-shadow:1px 1px 2px rgba(0,0,0,.4);
+}
+
